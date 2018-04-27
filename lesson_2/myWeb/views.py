@@ -22,10 +22,10 @@ def article(request,year,month):
 
 def regist(request):
     print('request======>',request)
-    user = request.GET.get('user')
-    pwd = request.GET.get('pwd')
+    user = request.POST.get('user')
+    pwd = request.POST.get('pwd')
     # print('user:',user)
     # print('pwd:',pwd)
-    if request.method == "POST":
+    if user and pwd:
         return HttpResponse("<h1 style='color: red;'>Regist Successful!</h1>")
     return render(request,'regist.html')

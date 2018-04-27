@@ -22,5 +22,5 @@ urlpatterns = [
     path('show_time',views.show_time),
     re_path(r'comment/page-(?P<page_num>\d{2})',views.comment),
     re_path(r'article/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})',views.article),
-    re_path(r'regist$',views.regist),
+    re_path(r'regist',views.regist),
 ]
