@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Time</title>
+</head>
+<body>
+    <h1>当前时间：{{ time }}</h1>
+    <p>list: {{ list.0 }}</p>
+    <p>list: {{ list.1 }}</p>
+{#    <p>list: {{ list.2 }}</p>#}
+    <hr>
+    <p>list: {{ list.2.name }}</p>
+    <hr>
+    <p>obj: {{ obj.name }}</p>
+{#    <p>obj: {{ obj.sex }}</p>#}
+    <hr>
+    <p>过滤器：{{ filter_test }}</p>
+    <p>过滤器：{{ filter_test | add:'---filter' }}</p>
+    <p>过滤器：{{ filter_test | cut:' ' }}</p>
+    <p>过滤器：{{ time | date:'Y-m-d_H' }}</p>
+    <hr>
+    <p>过滤器：未生效{{ tag_a }}</p>
+    <p style="font-size: 30px;">过滤器：加safe后生效__________{{ tag_a|safe }}</p>
+    <hr>
+</body>
+</html>

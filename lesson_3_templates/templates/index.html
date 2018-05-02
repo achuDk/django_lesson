@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>标签的流程控制</title>
+</head>
+<body>
+    <h1>流程控制</h1>
+    {% if dict.age < 10 %}
+        <p>{{ dict.name }} 的年龄小于10</p>
+    {% elif dict.age < 20 %}
+        <p>{{ dict.name }} 的年龄大于10且小于20</p>
+    {% else %}
+        <p>{{ dict.name }} 的年龄大于20</p>
+    {% endif %}
+    <hr>
+    <p>从1开始：</p>
+    {% for name in list %}
+        {{ forloop.counter }}  {{ name }}
+    {% endfor %}
+    <br>
+    <p>从0开始：</p>
+    {% for name in list %}
+        {{ forloop.counter0 }}  {{ name }}
+    {% endfor %}
+    <br>
+    <p>倒序从0开始：</p>
+    {% for name in list %}
+        {{ forloop.revcounter0 }}  {{ name }}
+    {% endfor %}
+</body>
+</html>
