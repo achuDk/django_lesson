@@ -1,4 +1,4 @@
-"""lesson_3_templates URL Configuration
+"""lesson_4_extend URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.0/topics/http/urls/
@@ -19,7 +19,6 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('show_time',views.show_time),
-    path('index',views.index),
-    path('login',views.login,name='login'),
+    path('backend',views.backend),
+    path('student',views.student),
 ]

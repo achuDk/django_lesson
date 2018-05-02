@@ -22,3 +22,7 @@ def index(request):
     list = ['alex','yuan','egon']
     dict = {"name": "yuan", "age": 21}
     return render(request,'index.html',locals())
+
+def login(request):
+
+    return render(request,'login.html',locals())
