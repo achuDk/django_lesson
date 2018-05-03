@@ -9,7 +9,8 @@ class Book(models.Model):
     issue_date = models.DateField()
     author = models.CharField(max_length=32,null=False)
 
-# b1 = Book('python',123,'2018-05-03')
+    def __str__(self):
+        return self.name
 
 
 class Author(models.Model):
