@@ -40,7 +40,7 @@ def delbook(request):
 
 
 def select(request):
-    """ 1. 查询的结果为多条记录组成的集合 """
+    """ 1. 查询的结果为多个对象组成的集合 """
     # 显示所有
     book_list = Book.objects.all()
 
@@ -56,7 +56,7 @@ def select(request):
     print(type(book_list),book_list)
     print(book_list[0])
 
-    """ 2. 查询的结果为一条记录，否则报错 """
+    """ 2. 查询的结果为一个对象，否则报错 """
     ret = Book.objects.get(id=1)
 
     print("ret:",ret)
