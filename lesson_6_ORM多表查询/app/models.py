@@ -7,12 +7,12 @@ class Book(models.Model):
     price = models.FloatField()
     issue_date = models.DateField()
 
-    """ 外键要建立在“一对多”中多所对应的一方，且外键关联另一张表的字段必须是主键"""
-
-
+    """ 一对多 """
+    # 外键要建立在“一对多”中多所对应的一方，且外键关联另一张表的字段必须是主键
     publish = models.ForeignKey("Publish",on_delete=models.CASCADE)
 
-    author = models.ForeignKey("Author",on_delete=models.CASCADE)
+    """ 多对多 """
+    author = models.ManyToManyField('Author')
 
     def __str__(self):
         return self.name
@@ -31,3 +31,8 @@ class Author(models.Model):
 
     def __str__(self):
         return self.name
+
+
+# class Book_Authors(models.Model):
+#     books = models.ForeignKey(Book,on_delete=models.CASCADE)
+#     authors = models.ForeignKey(Author,on_delete=models.CASCADE)
