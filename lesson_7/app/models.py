@@ -8,7 +8,6 @@ class Book(models.Model):
     price = models.FloatField()
     issue_date = models.DateField()
     publish = models.ForeignKey('Publish',on_delete=models.CASCADE)
-    # author = models.ManyToManyField('Author',related_name=None)
 
     def __str__(self):
         return self.name
